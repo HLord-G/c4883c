@@ -1,5 +1,13 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: "https://hlord-g.github.io/c4883c/", // I-change ni sa imong repo name
+  esbuild: {
+    target: "esnext", // Allow top-level await
+  },
+  build: {
+    target: "esnext", // Ensure latest JS features work
+    minify: false, // Optional: disable minification for debugging
+    outDir: 'dist', // Ensure output folder is 'dist'
+    emptyOutDir: true,
+  }
 });
