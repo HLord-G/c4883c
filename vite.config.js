@@ -1,6 +1,9 @@
 import { defineConfig } from 'vite';
+import autoprefixer from 'autoprefixer';
+import postcssNested from 'postcss-nested';
 
 export default defineConfig({
+  base: '/c4883c/', // Add this line with your actual repository name
   esbuild: {
     target: "esnext", // Allow top-level await
   },
@@ -13,8 +16,8 @@ export default defineConfig({
   css: {
     postcss: {
       plugins: [
-        require("autoprefixer"), // Fix older browser issues
-        require("postcss-nested"), // Ensure CSS nesting works
+        autoprefixer(), // Fix older browser issues
+        postcssNested(), // Ensure CSS nesting works
       ],
     },
   },
