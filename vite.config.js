@@ -3,7 +3,7 @@ import autoprefixer from 'autoprefixer';
 import postcssNested from 'postcss-nested';
 
 export default defineConfig({
-  base: '/c4883c/', // Add this line with your actual repository name
+  base: '/', // Add this line with your actual repository name
   esbuild: {
     target: "esnext", // Allow top-level await
   },
