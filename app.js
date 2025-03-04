@@ -67,12 +67,12 @@ console.log(result1); // "<p>1</p><p>2</p><p>3</p>" (HTML output)
 
 
 /* ======================[start] Load [start]====================== */  
-Q.load("component/app/runner")
+Q.load("./public/component/app/runner")
 /* ========================[end] Load [end]======================== */  
 
 
 /* ======================[start] LoadHold [start]====================== */  
-let renderCode = "component/render/reader"
+let renderCode = "./public/component/render/reader"
 let getdata = await Q.loadHold(renderCode);
 // getdata.$sample
 /* ========================[end] LoadHold [end]======================== */  
